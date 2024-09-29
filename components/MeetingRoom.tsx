@@ -40,9 +40,9 @@ const MeetingRoom = () => {
 
   const CallLayout = () => {
     switch (layout) {
-      case 'grid':
+      case 'lưới':
         return <PaginatedGridLayout />;
-      case 'speaker-right':
+      case 'người nói bên phải':
         return <SpeakerLayout participantsBarPosition="left" />;
       default:
         return <SpeakerLayout participantsBarPosition="right" />;
@@ -74,7 +74,7 @@ const MeetingRoom = () => {
             </DropdownMenuTrigger>
           </div>
           <DropdownMenuContent className="border-dark-1 bg-dark-1 text-white">
-            {['Grid', 'Speaker-Left', 'Speaker-Right'].map((item, index) => (
+            {['Lưới', 'Người nói bên trái', 'Người nói bên phải'].map((item, index) => (
               <div key={index}>
                 <DropdownMenuItem
                   onClick={() =>
