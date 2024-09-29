@@ -40,9 +40,9 @@ const MeetingRoom = () => {
 
   const CallLayout = () => {
     switch (layout) {
-      case 'lưới':
+      case 'grid':
         return <PaginatedGridLayout />;
-      case 'người nói bên phải':
+      case 'speaker-left':
         return <SpeakerLayout participantsBarPosition="left" />;
       default:
         return <SpeakerLayout participantsBarPosition="right" />;
